@@ -1,4 +1,3 @@
-#!/usr/bin/python3
 def gather_info():
     """docstring for gather_info"""
     height = float(input("What is your height? (inches or meters) "))
