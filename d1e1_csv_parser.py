@@ -8,7 +8,7 @@ def get_rows(file):
         csvfile.seek(0)
         csvreader = csv.DictReader(csvfile, dialect=csvdialect)
         for row in csvreader:
-            rows.append(row)
+            rows.append(row) 
     return rows
     
 def remove_items_without_categories(items):
