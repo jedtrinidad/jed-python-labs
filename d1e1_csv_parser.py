@@ -21,15 +21,15 @@ def remove_items_without_categories(items):
     return clean_items
             
 def write_items(items):
-    print("Writing cleaned items to file: 'clean_sample_products.csv'")
-    with open('clean_sample_products.csv', 'w', newline='') as csvfile:
+    print("Writing cleaned items to file: 'new_file.csv'")
+    with open('new_file.csv', 'w', newline='') as csvfile:
         fields = list(items[0].keys())
         writer = csv.DictWriter(csvfile, fieldnames=fields)
         
         writer.writeheader()
         writer.writerows(items)
 
-filename = 'sample_products.csv'
+filename = input("Please enter a filename: ")
 items = get_rows(filename)
 cleaned_items = remove_items_without_categories(items)
 write_items(cleaned_items)
