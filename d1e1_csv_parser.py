@@ -15,7 +15,7 @@ def remove_items_without_categories(items):
     clean_items = []
     print("Removing Items without categories.")
     for item in items:
-        if item['Categories'] is '':
+        if item['Categories'] == '':
             items.remove(item)
     clean_items = items
     return clean_items
